@@ -243,6 +243,8 @@ footer .logo{display:inline-block}.panel .logo{display:inline-block}
 .sc2 .ico{width:50px;height:50px;margin-bottom:.8rem}.sc2 .ico .ri{width:30px;height:30px}
 .card:hover .ico .ri,.step:hover .ico .ri,.sc2:hover .ico .ri,.pil div:hover .ri{transform:scale(1.12) rotate(-3deg)}
 .pil .ico{margin-bottom:.6rem}
+.sec-head.c{margin-left:auto;margin-right:auto;text-align:center}
+.pil .ico.sm{width:60px;height:60px;border-radius:16px;box-shadow:0 16px 28px -16px var(--c,#0066CC);transition:transform .3s}.pil .ico svg{width:36px;height:36px}.pil>div:nth-child(1) .ico{background:linear-gradient(135deg,#0066CC,#0A8FB8);--c:#0066CC}.pil>div:nth-child(2) .ico{background:linear-gradient(135deg,#A30000,#D6336C);--c:#A30000}.pil>div:nth-child(3) .ico{background:linear-gradient(135deg,#512BD4,#0066CC);--c:#512BD4}.pil>div:nth-child(4) .ico{background:linear-gradient(135deg,#0A8F6A,#0A8FB8);--c:#0A8F6A}.pil>div:hover .ico{transform:translateY(-4px)}
 .step .ico{margin-bottom:.9rem}.step b{position:absolute;right:1.2rem;top:.9rem;font-size:2rem;color:var(--line);margin:0}
 .av .ri{width:19px;height:19px}.av span{overflow:hidden}
 .bico{position:absolute;right:max(1.25rem,calc((100% - 1180px)/2));top:50%;transform:translateY(-50%);opacity:.22;pointer-events:none}.bico .ri{width:170px;height:170px;--ac:#fff}
@@ -259,7 +261,9 @@ footer .logo{display:inline-block}.panel .logo{display:inline-block}
 .btn .ic{width:18px;height:18px}
 .follow{background:#06101C;border-top:1px solid #1B2D47;padding:1rem 0;color:#fff}.follow .wrap{display:flex;align-items:center;justify-content:center;gap:.8rem;font-weight:700;font-size:.9rem}
 .sf{width:38px;height:38px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;transition:transform .2s}.sf:hover{transform:translateY(-3px)}.sf svg{width:20px;height:20px}.sf.fbk{background:#1877F2}.sf.tkt{background:#000;border:1px solid #3a3a3a}.sf.wap{background:#25D366}
-.wa{left:auto;right:1rem}.fab{bottom:calc(5.2rem + env(safe-area-inset-bottom,0px))}.totop{bottom:calc(9.2rem + env(safe-area-inset-bottom,0px))}
+.wa{left:auto;right:1rem}
+.wa{flex-direction:row-reverse;justify-content:flex-start;width:auto;min-width:58px;max-width:58px;overflow:hidden;white-space:nowrap;transition:max-width .45s cubic-bezier(.2,.7,.2,1),box-shadow .3s}.wa .ic{margin:0 13px}.wa .wal{display:block;font:700 .88rem var(--body);padding-left:1.3rem;opacity:0;transition:opacity .25s .1s}.wa:hover,.wa:focus-visible{max-width:340px;box-shadow:0 14px 34px -10px rgba(37,211,102,.7)}.wa:hover .wal,.wa:focus-visible .wal{opacity:1}
+@media (prefers-reduced-motion:no-preference){.wa{animation:waPulse 2.4s infinite}.wa:hover,.wa:focus-visible{animation:none}@keyframes waPulse{0%{box-shadow:0 12px 30px -10px rgba(0,0,0,.5),0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 12px 30px -10px rgba(0,0,0,.5),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 12px 30px -10px rgba(0,0,0,.5),0 0 0 0 rgba(37,211,102,0)}}}.fab{width:48px;height:48px;padding:0;justify-content:center;gap:0;right:1.1rem;bottom:calc(5.1rem + env(safe-area-inset-bottom,0px));opacity:.92}.fab .ic{width:22px;height:22px}.fab:hover{opacity:1}.totop{width:38px;height:38px;right:1.25rem;bottom:calc(8.4rem + env(safe-area-inset-bottom,0px))}
 .cci{width:42px;height:42px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;flex:none}.ccards .cci .ic{width:20px;height:20px;color:#fff}.ccards .waib{width:42px;height:42px}.ccards .waib .ic{width:24px;height:24px;color:#fff}
 .ico.br{background:none;width:48px;height:48px}.ico.br svg{width:100%;height:100%}
 #pre{position:fixed;inset:0;z-index:99999;background:#A30000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.8rem;transition:transform .9s cubic-bezier(.77,0,.18,1),visibility 0s .9s}
@@ -355,9 +359,9 @@ html.pre-lock,html.pre-lock body{overflow:hidden}
 <div class="modal" id="search" role="dialog" aria-label="Buscar" hidden><div class="mbox"><h4>Buscar</h4><input id="sq" type="search" placeholder="Buscar proyectos o servicios" autocomplete="off" aria-label="Buscar"><div id="sres"></div></div></div>
 <main id="app" tabindex="-1"></main>
 <footer id="foot"></footer>
-<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Conversar por WhatsApp"><svg class="ic fill" aria-hidden="true"><use href="#i-wa"/></svg></a>
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Conversar por WhatsApp"><svg class="ic fill" aria-hidden="true"><use href="#i-wa"/></svg><span class="wal">¿Conversamos por WhatsApp?</span></a>
 <button class="totop" id="top" type="button" aria-label="Volver arriba" hidden><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg></button>
-<button class="fab" id="fab" type="button" data-open-chat hidden aria-label="Abrir asistente de IA">Asistente IA</button>
+<button class="fab" id="fab" type="button" data-open-chat hidden aria-label="Abrir asistente de IA" title="Asistente de IA"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg></button>
 <aside class="chat" id="chat" role="dialog" aria-label="Asistente de SINKRON Mechatronics" hidden>
 <div class="ch"><div><strong>Asistente de SINKRON Mechatronics</strong><small>Respuestas generadas con IA</small></div><button type="button" id="cclose" aria-label="Cerrar asistente">×</button></div>
 <div id="msgs" aria-live="polite"></div>
@@ -493,118 +497,7 @@ D.tests=[
 {q:'Gestionaron la importación de componentes con total reserva y cumpliendo la normativa. Nuestro proveedor se mantuvo protegido.',w:'Empresa de manufactura',r:'Cliente de Ghost Importer'}
 ];
 D.stack=[['dotnet','.NET, C# y Visual Basic','Aplicaciones de escritorio y web robustas.'],['angular','Angular, ASP.NET y PHP','Sitios, portales y APIs empresariales.'],['android','Android','Aplicaciones móviles y tablets.'],['sql','Bases de datos y servidores','Diseño, afinamiento y respaldo.'],['powerbi','Power BI y reportes','Inteligencia de negocios.'],['chip','Microcontroladores y firmware','Control electrónico a medida.'],['wifi','IoT, GPS y GSM','Monitoreo y control remoto.'],['spark','Inteligencia artificial','Asistentes, análisis y predicción.'],['sun','Energía solar y baterías','Paneles, controladores, inversores y monitoreo.'],['cloud','Cloud y hosting','Servidores y dominios.'],['lock','Ciberseguridad','Certificados SSL y buenas prácticas.']];
-D.clients = [
-    {
-        n: 'Empresa 1',
-        src: '/legacy/logos/cliente1.png'
-    },
-    {
-        n: 'Empresa 2',
-        src: '/legacy/logos/cliente2.png'
-    },
-    {
-        n: 'Empresa 3',
-        src: '/legacy/logos/cliente3.png'
-    },
-    {
-        n: 'Empresa 4',
-        src: '/legacy/logos/cliente4.png'
-    },
-    {
-        n: 'Empresa 5',
-        src: '/legacy/logos/cliente5.png'
-    },
-    {
-        n: 'Empresa 6',
-        src: '/legacy/logos/cliente6.png'
-    }
-]; D.brands=[{
-        n: 'Marca 1',
-        src: '/legacy/marcas/Comp1.jpg'
-    },
-    {
-        n: 'Marca 2',
-        src: '/legacy/marcas/Comp2.jpg'
-    },
-    {
-        n: 'Marca 3',
-        src: '/legacy/marcas/Comp3.jpg'
-    },
-    {
-        n: 'Marca 4',
-        src: '/legacy/marcas/Comp4.jpg'
-    },
-    {
-        n: 'Marca 5',
-        src: '/legacy/marcas/Comp5.jpg'
-    },
-    {
-        n: 'Marca 6',
-        src: '/legacy/marcas/Comp6.jpg'
-    }
-    ,
-    {
-        n: 'Marca 7',
-        src: '/legacy/marcas/Comp7.jpg'
-    },
-    {
-        n: 'Marca 8',
-        src: '/legacy/marcas/Comp8.jpg'
-    },
-    {
-        n: 'Marca 9',
-        src: '/legacy/marcas/Comp9.jpg'
-    },
-    {
-        n: 'Marca 10',
-        src: '/legacy/marcas/Comp10.jpg'
-    },
-    {
-        n: 'Marca 11',
-        src: '/legacy/marcas/Comp11.jpg'
-    },
-    {
-        n: 'Marca 12',
-        src: '/legacy/marcas/Comp12.jpg'
-    },
-    {
-        n: 'Marca 13',
-        src: '/legacy/marcas/Comp13.jpg'
-    },
-    {
-        n: 'Marca 14',
-        src: '/legacy/marcas/Comp14.jpg'
-    },
-    {
-        n: 'Marca 15',
-        src: '/legacy/marcas/Comp15.jpg'
-    },
-    {
-        n: 'Marca 16',
-        src: '/legacy/marcas/Comp16.jpg'
-    }
-    ,
-    {
-        n: 'Marca 17',
-        src: '/legacy/marcas/Comp17.jpg'
-    },
-    {
-        n: 'Marca 18',
-        src: '/legacy/marcas/Comp18.jpg'
-    },
-    {
-        n: 'Marca 19',
-        src: '/legacy/marcas/Comp19.jpg'
-    },
-    {
-        n: 'Marca 20',
-        src: '/legacy/marcas/Comp20.jpg'
-    },
-    {
-        n: 'Marca 21',
-        src: '/legacy/marcas/Comp21.jpg'
-    }
-]; /* Marcas: agrega {n:'Marca',src:'data:image/png;base64,...'} */ /* Agrega aquí los logos reales de tus clientes: {n:'Empresa',src:'data:image/png;base64,...'} */
+D.clients=[]; D.brands=[]; /* Marcas: agrega {n:'Marca',src:'data:image/png;base64,...'} */ /* Agrega aquí los logos reales de tus clientes: {n:'Empresa',src:'data:image/png;base64,...'} */
 D.sectors=['Agroindustria','Logística y transporte','Manufactura','Energía solar','Comercio','Laboratorios','Construcción','Servicios corporativos'];
 D.steps=[['Analizamos','Entendemos el problema, los flujos operativos y los objetivos de tu empresa.'],['Diseñamos','Definimos la solución, la arquitectura electrónica y de software y la experiencia de uso.'],['Construimos','Desarrollamos el hardware y el software con pruebas de calidad.'],['Integramos','Conectamos equipos, sistemas, bases de datos y dispositivos en un solo ecosistema.'],['Implementamos','Instalamos en tu planta u oficina y capacitamos a tu equipo.'],['Evolucionamos','Mantenemos, mejoramos y escalamos la solución conforme crece tu negocio.']];
 D.dif=[['Soluciones a medida','Tu empresa no tiene que adaptarse a un producto cerrado: diseñamos la herramienta que encaja en tu operación.'],['Electrónica y software','Un mismo equipo diseña la tarjeta, programa el firmware y construye el sistema.'],['Integración','Conectamos equipos, datos, sistemas y proveedores en un ecosistema unificado.'],['Innovación','Incorporamos IoT e inteligencia artificial para preparar tu empresa para el futuro.'],['Atención personalizada','Entendemos primero tu necesidad real y luego proponemos la solución más eficiente.']];
@@ -652,23 +545,23 @@ return `<section class="hero"><canvas id="net" aria-hidden="true"></canvas><div 
 <figure class="hfig"><img src="${IMG.hero}" alt="Técnica de SINKRON Mechatronics operando una máquina de ensamblaje electrónico"><div class="hrow"><div class="fl f1"><span class="dot"></span>Tecnología e Integración con Visión Empresarial</div><div class="fl f2"><div class="av"><span>${ri('chip')}</span><span>${ri('code')}</span><span>${ri('wifi')}</span><span>${ri('truck')}</span></div><div>${D.svcs.length} soluciones<small>4 divisiones, un solo equipo</small></div></div></div></figure></div>
 <a class="explore" href="#clients" data-scroll="clients">Explorar ${ic('chev-d','sm')}</a></section>
 <div class="mq" id="clients"><h3>Empresas Líderes que confían en SINKRON</h3><div class="mq-t">${(D.clients.length?D.clients.map(c=>`<span class="cl-i"><img src="${c.src}" alt="${esc(c.n)}"></span>`):Array.from({length:8},(_,i)=>`<span class="cl-i ph">Logo de cliente ${i+1}</span>`)).join('')}</div></div>
-<section><div class="wrap g2"><div>${sh('¿Por qué elegir SINKRON?','Soluciones a medida: electrónica, software e inteligencia artificial','Analizamos los desafíos de tu empresa para diseñar el sistema integral que optimiza tu operación.')}
+<section><div class="wrap g2"><div>${sh('[ ¿POR QUÉ ELEGIR SINKRON? ]','Soluciones a medida: electrónica, software e inteligencia artificial','Analizamos los desafíos de tu empresa para diseñar el sistema integral que optimiza tu operación.')}
 <div class="pil"><div><span class="ico sm">${ri('code')}</span><h4>Software a medida</h4><p>Herramientas adaptadas a tus procesos reales para mejorar la productividad.</p></div><div><span class="ico sm">${ri('chip')}</span><h4>Electrónica integrada</h4><p>Tarjetas, sensores y firmware conectados a tu software.</p></div><div><span class="ico sm">${ri('spark')}</span><h4>Tecnología + IA</h4><p>Análisis, asistentes y procesos más inteligentes.</p></div><div><span class="ico sm">${ri('shield')}</span><h4>Atención personalizada</h4><p>No te adaptas a un producto genérico: construimos lo que necesitas.</p></div></div>
 <a class="btn out" href="#nosotros" data-go="nosotros">Conocer más</a></div>
 <div><div class="imgbox"><img src="${IMG.team}" alt="Equipo de SINKRON Mechatronics revisando un sistema en planta" loading="lazy"><div class="badge"><b>100%</b><span>Compromiso con soluciones integrales a medida e innovación</span></div></div>
-<div class="founder"><div class="ava iso"><img src="${IMG.iso}" alt="Isotipo de SINKRON"></div><div><h4>SINKRON Mechatronics</h4><span style="font-size:.78rem;color:var(--muted)">Mensaje de la gerencia${rt()}</span><p>Creemos que la tecnología debe ser el motor para hacer crecer y transformar los negocios. Desde 2016, trabajamos codo a codo con nuestros clientes desarrollando soluciones integrales, confiables e innovadoras, diseñadas específicamente para sus necesidades operativas. Agradecemos a cada empresa que confía en nosotros y nos permite ser parte de sus proyectos, automatizaciones y desafíos.</p></div></div></div></div></section>
-<section class="alt"><div class="wrap g2"><div>${sh('Sobre SINKRON','Ingeniería con visión empresarial','')}
+<div class="founder"><div class="ava iso"><img src="${IMG.iso}" alt="Isotipo de SINKRON"></div><div><h4>SINKRON Mechatronics</h4><span style="font-size:.78rem;color:var(--muted)">Mensaje de la gerencia</span><p>Creemos que la tecnología debe ser el motor para hacer crecer y transformar los negocios. Desde 2016, trabajamos codo a codo con nuestros clientes desarrollando soluciones integrales, confiables e innovadoras, diseñadas específicamente para sus necesidades operativas. Agradecemos a cada empresa que confía en nosotros y nos permite ser parte de sus proyectos, automatizaciones y desafíos.</p></div></div></div></div></section>
+<section class="alt"><div class="wrap g2"><div>${sh('[ SOBRE SINKRON ]','Ingeniería con visión empresarial','')}
 <p>SINKRON Mechatronics es una empresa peruana dedicada a la automatización avanzada y al desarrollo de soluciones tecnológicas a medida. Nuestro enfoque se centra en entender a fondo la necesidad de cada cliente para diseñar e integrar sistemas adaptados a sus procesos reales. No creemos en herramientas genéricas: analizamos, diseñamos y construimos la tecnología exacta que resuelve tus problemas operativos e impulsa tu negocio con IA.</p>
 <div class="cnt"><div><b data-count="13" data-suf="+">13+</b><span>años en electrónica industrial</span></div><div><b data-count="20" data-suf="+">20+</b><span>años en soporte y aplicativos</span></div></div>
 <a class="btn" href="#contacto" data-go="contacto">Contactar con SINKRON</a></div>
 <div class="grid4" style="grid-template-columns:1fr 1fr">${['Electrónica','Software','Energía solar','Presencia digital','Servicios','Importación'].map((x,i)=>`<div class="card" style="padding:1.2rem"><span class="ico ${i%2?'r':''}" style="margin-bottom:.6rem">${ri(['chip','code','sun','globe','shield','truck'][i])}</span><h4>${x}</h4></div>`).join('')}</div></div></section>
-<section><div class="wrap"><div class="sh-row">${sh('Soluciones principales','Desarrollamos tecnología para procesos reales','')}<a class="btn out" href="#soluciones" data-go="soluciones">Ver todas las soluciones</a></div>
+<section><div class="wrap"><div class="sh-row">${sh('[ SOLUCIONES PRINCIPALES ]','Desarrollamos tecnología para procesos reales','')}<a class="btn out" href="#soluciones" data-go="soluciones">Ver todas las soluciones</a></div>
 <div class="grid3">${D.main.map((id,i)=>svcCard(S(id),'0'+(i+1))).join('')}</div></div></section>
-<section class="alt"><div class="wrap">${sh('Diferenciadores','¿Por qué SINKRON?','Unimos compromiso, experiencia y visión estratégica para diseñar la tecnología que impulsa el crecimiento y la transformación real de tu empresa.')}<div class="dif">${D.dif.map((x,i)=>`<div><b>0${i+1}</b><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join('')}</div></div></section>
+<section class="alt"><div class="wrap">${sh('[ DIFERENCIADORES ]','¿Por qué SINKRON?','Unimos compromiso, experiencia y visión estratégica para diseñar la tecnología que impulsa el crecimiento y la transformación real de tu empresa.')}<div class="dif">${D.dif.map((x,i)=>`<div><b>0${i+1}</b><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join('')}</div></div></section>
 <section><div class="wrap">${sh('[ CÓMO TRABAJAMOS ]','Nuestro proceso de desarrollo y transformación','')}<div class="steps">${D.steps.map((x,i)=>`<div class="step"><span class="ico sm${i%2?' r':''}">${ri(['analyze','design','build','integrate','deploy','evolve'][i])}</span><b>0${i+1}.</b><h3>${x[0].toUpperCase()}</h3><p>${x[1]}</p></div>`).join('')}</div></div></section>
-<section class="alt"><div class="wrap">${sh('[ STACK TECNOLÓGICO ]','Tecnología para construir soluciones robustas','')}</div><div class="stk"><div class="mq-t">${D.stack.map(x=>`<div class="sc2">${BR[x[0]]?`<span class="ico br">${BR[x[0]]}</span>`:`<span class="ico">${ri(x[0])}</span>`}<h4>${x[1]}</h4><p>${x[2]}</p></div>`).join('')}</div></div></section>
+<section class="alt"><div class="wrap">${sh('[ STACK TECNOLÓGICO ]','Tecnología para construir soluciones robustas','').replace('class="sec-head"','class="sec-head c"')}</div><div class="stk"><div class="mq-t">${D.stack.map(x=>`<div class="sc2">${BR[x[0]]?`<span class="ico br">${BR[x[0]]}</span>`:`<span class="ico">${ri(x[0])}</span>`}<h4>${x[1]}</h4><p>${x[2]}</p></div>`).join('')}</div></div></section>
 <section><div class="wrap">${sh('[ STACK DE NUESTRAS MARCAS ]','Equipamiento y Suministros para Integrar Soluciones a Medida.','')}</div><div class="stk"><div class="mq-t">${(D.brands.length?D.brands.map(c=>`<span class="cl-i"><img src="${c.src}" alt="${esc(c.n)}"></span>`):Array.from({length:8},(_,i)=>`<span class="cl-i ph">Logo de marca ${i+1}</span>`)).join('')}</div></div></section>
-<section><div class="wrap"><div class="sh-row">${sh('Portafolio','Soluciones Tecnológicas a Medida','Diseñamos y construimos sistemas integrados para optimizar la productividad, automatizar procesos y garantizar el control total de tu empresa.')}<div style="display:flex;gap:1rem;align-items:center"><div class="arr"><button type="button" data-car="-1" aria-label="Anterior">${ic('chev-l')}</button><button type="button" data-car="1" aria-label="Siguiente">${ic('chev-r')}</button></div><a class="btn out" href="#proyectos" data-go="proyectos">Ver todos</a></div></div>
+<section><div class="wrap"><div class="sh-row">${sh('[ PORTAFOLIO ]','Soluciones Tecnológicas a Medida','Diseñamos y construimos sistemas integrados para optimizar la productividad, automatizar procesos y garantizar el control total de tu empresa.')}<div style="display:flex;gap:1rem;align-items:center"><div class="arr"><button type="button" data-car="-1" aria-label="Anterior">${ic('chev-l')}</button><button type="button" data-car="1" aria-label="Siguiente">${ic('chev-r')}</button></div><a class="btn out" href="#proyectos" data-go="proyectos">Ver todos</a></div></div>
 <div class="car"><div class="ptrack" id="ptrack">${D.projects.map(pCard).join('')}</div></div></div></section>
 <section class="alt"><div class="wrap"><div class="ads"><div>${sh('[ PUBLICIDAD DIGITAL Y CRECIMIENTO ]','Haz que tu negocio sea encontrado','')}<p>Diseñamos estrategias de publicidad digital orientadas a resultados: campañas en Google y Meta, páginas de alta conversión y analítica para transformar visitas en clientes potenciales.</p><div class="chips">${['Google Ads y búsqueda','Meta Ads (FB e IG)','Landing pages','Medición y analítica','B2B y B2C'].map(x=>`<span>${x}</span>`).join('')}</div>
 <div class="btns"><a class="btn" href="#s-publicidad" data-go="s-publicidad">Quiero hacer crecer mi negocio</a><a class="btn ghost" href="${waHref()}" target="_blank" rel="noopener">${waIc()} Hablar por WhatsApp</a></div></div>
@@ -680,7 +573,7 @@ ${mq('strip',D.svcs.map(s=>`<span>${s.t.split(' · ')[0]}</span>`).join(''))}
 ${contactS()}${newsS()}`;};
 const about=()=>banner('Nosotros',[['Nosotros']],'Ingeniería, integración y tecnología desde Piura para todo el Perú.')+`<section><div class="wrap g2"><div class="imgbox"><img src="${IMG.team}" alt="Equipo de SINKRON Mechatronics" loading="lazy"></div><div>${sh('Quiénes somos','Ingeniería peruana, con visión internacional','')}<p>Somos una empresa peruana formada por profesionales de la electrónica industrial y el desarrollo de software. Automatizamos los procesos de nuestros clientes con soluciones a medida, a nivel nacional e internacional.</p><p>Contamos con más de 13 años de experiencia en electrónica instrumental-industrial y en mantenimiento de balanzas, y más de 20 años en soporte técnico y construcción de aplicativos.</p><div class="cnt"><div><b data-count="13" data-suf="+">13+</b><span>años en electrónica industrial</span></div><div><b data-count="20" data-suf="+">20+</b><span>años en software y soporte</span></div><div><b data-count="${D.svcs.length}" data-suf="">${D.svcs.length}</b><span>soluciones</span></div></div></div></div></section>
 <section class="alt"><div class="wrap">${sh('Misión y visión','Lo que nos mueve','')}<div class="grid3"><div class="card"><span class="ico">${ri('gear')}</span><h3>Misión</h3><p>Brindar soluciones de hardware y software para cualquier tipo de negocio, mejorando la calidad de sus procesos, respetando sus normativas y políticas y manteniendo la disponibilidad de sus activos.</p></div><div class="card"><span class="ico r">${ri('spark')}</span><h3>Visión</h3><p>Ser una empresa líder en servicios de tecnología de hardware y software, con soluciones integrales y fiables para procesos comerciales, industriales, productivos e informáticos.</p></div><div class="card"><span class="ico">${ri('shield')}</span><h3>Valores</h3><p>Compromiso con el cliente, rigor técnico, confidencialidad, mejora continua y atención personalizada.</p></div></div></div></section>
-<section><div class="wrap">${sh('Diferenciadores','¿Por qué SINKRON?','')}<div class="dif">${D.dif.map((x,i)=>`<div><b>0${i+1}</b><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join('')}</div><div class="btns" style="margin-top:2rem"><a class="btn" href="#contacto" data-go="contacto">Agenda tu diagnóstico técnico</a><a class="btn out" href="#soluciones" data-go="soluciones">Ver soluciones</a></div></div></section>${newsS()}`;
+<section><div class="wrap">${sh('[ DIFERENCIADORES ]','¿Por qué SINKRON?','')}<div class="dif">${D.dif.map((x,i)=>`<div><b>0${i+1}</b><h4>${x[0]}</h4><p>${x[1]}</p></div>`).join('')}</div><div class="btns" style="margin-top:2rem"><a class="btn" href="#contacto" data-go="contacto">Agenda tu diagnóstico técnico</a><a class="btn out" href="#soluciones" data-go="soluciones">Ver soluciones</a></div></div></section>${newsS()}`;
 const services=()=>banner('Soluciones',[['Soluciones']],'Cuatro divisiones y '+D.svcs.length+' soluciones, diseñadas según lo que tu proceso necesite.')+`<section><div class="wrap">${D.groups.map(([g,n])=>`<div class="sg"><h3>${n}</h3><div class="grid3" style="margin-top:1.2rem">${D.svcs.filter(s=>s.g===g).map(s=>svcCard(s,String(D.svcs.indexOf(s)+1).padStart(2,'0'))).join('')}</div></div>`).join('')}</div></section>${newsS()}`;
 const svcPage=id=>{const i=D.svcs.findIndex(s=>s.id===id),s=D.svcs[i],pv=D.svcs[(i+D.svcs.length-1)%D.svcs.length],nx=D.svcs[(i+1)%D.svcs.length];
 return banner(s.t,[['Soluciones','soluciones'],[s.t]],'',s.ic)+`<section><div class="wrap sdg"><article class="sd"><img class="cover" src="${IMG[s.img[0]]}" alt="${esc(s.t)}"><h2 class="l2">${s.i}</h2>${s.p.map(x=>`<p>${x}</p>`).join('')}${s.how?`<h3>¿Cómo trabajamos?</h3><ol class="how">${s.how.map((x,i)=>`<li><b>${i+1}</b><span>${x}</span></li>`).join('')}</ol><h3>Lo que resolvemos por ti:</h3>`:''}<ul class="chk">${s.b.map(x=>`<li>${ic('check')}<span>${x}</span></li>`).join('')}</ul>
@@ -789,7 +682,7 @@ function buildChrome(){
  $('#foot').innerHTML=`<div class="wrap"><div class="fg"><div>${logo}<p>Ingeniería, integración y tecnología. Diseñamos electrónica, software e inteligencia artificial a medida para procesos industriales y empresariales.</p>${social()}</div>
  <div><h4>Soluciones</h4><ul>${D.svcs.slice(0,8).map(s=>`<li><a href="#s-${s.id}" data-go="s-${s.id}">${s.t.split(' · ')[0]}</a></li>`).join('')}<li><a href="#soluciones" data-go="soluciones">Ver todas</a></li></ul></div>
  <div><h4>Enlaces rápidos</h4><ul><li><a href="#nosotros" data-go="nosotros">Nosotros</a></li><li><a href="#proyectos" data-go="proyectos">Proyectos</a></li><li><a href="#faq" data-go="faq">Preguntas frecuentes</a></li><li><a href="#contacto" data-go="contacto">Contacto</a></li><li><a href="${waHref()}" target="_blank" rel="noopener">WhatsApp directo</a></li></ul></div>
- <div><h4>Contacto</h4><ul class="fc"><li><span class="fci">${ic('pin')}</span><a href="https://maps.google.com/?q=${encodeURIComponent(CFG.address)}" target="_blank" rel="noopener">${CFG.address}</a></li><li>${waIc()}<span>${CFG.phones.map(p=>`<a href="${waHref('',p[1])}" target="_blank" rel="noopener">${p[0]}</a>`).join('<br>')}</span></li><li><span class="fci">${ic('mail')}</span><a href="mailto:${CFG.email}">${CFG.email}</a></li><li><span class="fci">${ic('clock')}</span><span>${CFG.hours}</span></li></ul></div></div>
+ <div><h4>Contacto</h4><ul class="fc"><li><span class="fci">${ic('pin')}</span><a href="https://maps.google.com/?q=${encodeURIComponent(CFG.address)}" target="_blank" rel="noopener">${CFG.address}</a></li><li>${waIc()}<span>${CFG.phones.map(p=>`<a href="${waHref('',p[1])}" target="_blank" rel="noopener">${p[0]}</a>`).join(' / ')}</span></li><li><span class="fci">${ic('mail')}</span><a href="mailto:${CFG.email}">${CFG.email}</a></li><li><span class="fci">${ic('clock')}</span><span>${CFG.hours}</span></li></ul></div></div>
  <div class="fb"><span>© 2026 SINKRON · SOLUTNOR E.I.R.L. · Todos los derechos reservados.</span><div><a href="#terminos" data-go="terminos">Términos y Condiciones</a><span aria-hidden="true">·</span><a href="#privacidad" data-go="privacidad">Privacidad</a></div></div></div>`;
  $('#wa').href=waHref();
 }
